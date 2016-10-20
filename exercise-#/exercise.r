@@ -10,7 +10,7 @@ movie <- "Lord of the Rings: The Fellowship of the Ring"
 
 # Make a variable called move.no.spaces that holds movie where all the spaces
 # are replaced with the '+' character
-move.no.spaces <- gsub(" ", "+", movie)
+movie.no.spaces <- gsub(" ", "+", movie)
 
 # Make a variable called "parameters" that holds a string with the parameters
 # to pass to the API. View the OMDb documentation to see which parameters
@@ -38,6 +38,8 @@ Director <- function(movies) {
 # Call Director with your favorite movie, and assign it to the variable movie.director
 movie.director <- Director(movie.df)
 
+
+# Bonus #
 
 # Knowing the director of on movie is okay, but it'd be great to know the directors of different
 # movies. 
