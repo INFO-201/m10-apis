@@ -1,9 +1,13 @@
 # Install and load the jsonlite package
+install.packages("jsonlite")
+require(jsonlite)
 
 # Make a variable base.url that has the same base url from the omdb documentation.
 # (Hint: visit https://www.omdbapi.com/ to find the base url)
+base.url <- "http://www.omdbapi.com/?"
 
 # Make a variable called movie that has the names of your favorite movie
+movie <- 
 
 # Make a variable called move.no.spaces that holds movie where all the spaces
 # are replaced with the '+' character
