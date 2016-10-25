@@ -15,7 +15,7 @@ num.album <- flattened %>%
               arrange(-n)
 
 # Bonus: perform both of the steps above in one line (one statement)
-num_album <- top.nelly %>% 
+num.album <- top.nelly %>% 
               flatten %>% 
               group_by(album.name) %>% 
               summarise(n = n()) %>% 
