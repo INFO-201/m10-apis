@@ -12,7 +12,7 @@ vehicle <- add_rownames(mtcars, var='car')
 # Function to debug:
 # Given a number of forward gears and a number of cylinders, what is the 
 # Name of the car with the best mpg?
-best_gears_cyl <- functon(gears, cylinders) {
+BestGearsCyl <- functon(gears, cylinders) {
   ret <- vehicles %>%  
         filter(gear == gears, cyl == cylinders) %>% 
         filter(mgp = max(mpg)) %>% 
@@ -20,14 +20,14 @@ best_gears_cyl <- functon(gears, cylinders) {
 }
 
 # Get the best mpg car for 6 cylinder cars with 4 gears
-answer <- best_gears_cyl(6, 4)
+answer <- BestGearsCyl(6, 4)
 
 ######## Fixed ######### ----------------------------------------------
 
 # Function to debug:
 # Given a number of forward gears and a number of cylinders, what is the 
 # Name of the car with the best mpg?
-best_gears_cyl <- function(gears, cylinders) {
+BestGearsCyl <- function(gears, cylinders) {
   ret <- vehicle %>%  
     filter(gear == gears, cyl == cylinders) %>% 
     filter(mpg== max(mpg)) %>% 
@@ -36,4 +36,4 @@ best_gears_cyl <- function(gears, cylinders) {
 }
 
 # Get the best mpg car for 6 cylinder cars with 4 gears
-answer <- best_gears_cyl(4, 6)
+answer <- BestGearsCyl(4, 6)
