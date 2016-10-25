@@ -11,7 +11,7 @@ In addition to exposing _functions_ for buidling software, APIs are often built 
 <!-- END doctoc -->
 
 ## Resources
--[WikiPedia- APIS](https://en.wikipedia.org/wiki/Application_programming_interface)
+- [WikiPedia- APIS](https://en.wikipedia.org/wiki/Application_programming_interface)
 - [REST APIs](https://en.wikipedia.org/wiki/Application_programming_interface)
 - [JSON View Extension](https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc?hl=en)
 - [Spotify Web API](https://developer.spotify.com/web-api/)
