@@ -22,4 +22,4 @@ BestGearsCyl <- function(gears, cylinders) {
 }
 
 # Get the best mpg car for 6 cylinder cars with 4 gears
-answer <- BestGearsCyl(6, 4)
+answer <- BestGearsCyl(4, 6)
