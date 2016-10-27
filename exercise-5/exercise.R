@@ -3,14 +3,16 @@ library(jsonlite)
 library(dplyr)
 
 # Write a function that allows you to specify a movie, then does the following:
-  
+Review <- function(movie)
   # Replace all of the spaces in your movie title with plus signs (+)
-  
+  no.space <- gsub(" ", "+", movie)
   
   # Construct a search query using YOUR api key
   # The base URL is https://api.nytimes.com/svc/movies/v2/reviews/search.json?
   # See the interactive console for more detail:https://developer.nytimes.com/movie_reviews_v2.json#/Console/GET/reviews/search.json
-  
+  base.url <- "https://api.nytimes.com/svc/movies/v2/reviews/search.json?"
+  API.key <- "4d443d5f92b84094aa433f50bfb012db"
+  request <- paste0(base.url, "query=", no.space, API.key)
   
   # Request data using your search query
   
