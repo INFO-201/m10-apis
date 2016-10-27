@@ -2,27 +2,35 @@
 
 # Make a variable base.url that has the same base url from the omdb documentation.
 # (Hint: visit https://www.omdbapi.com/ to find the base url)
-
+library(jsonlite)
+library(curl)
+base.url<-"http://www.omdbapi.com/?"
 # Make a variable called movie that has the names of your favorite movie
-
+movies<-c("Mad Max","It's such a beautiful day","Interstellar")
 # Make a variable called move.no.spaces that holds movie where all the spaces
 # are replaced with the '+' character
-
+move.no.spaces<-gsub(" ","+",movies)
 # Make a variable called "parameters" that holds a string with the parameters
 # to pass to the API. View the OMDb documentation to see which parameters
 # are available. Remember to separate parameters with the '&' character.
-
+parameters<-paste0("t=",move.no.spaces[1],"&","r=json")
 # Make a variable called request that is a string of a request URL made up of the base URL
 # and the parameters string
-
+request<- paste0(base.url,parameters)
+print(request)
 # Use fromJSON to retrieve JSON data from the omdb api using your request URL.
 # Store the result in a variable called movie.data
-
+movie.data<-as.data.frame(fromJSON(request))
+movie.frame<-flatten(movie.data)
 # Make movie_data into a data frame using as.data.frame
 
 # Write a function called Director that accepts a data frame of movie info and returns
 # A vector of strings that states a movie and the director of said movie.
-
+Director<-function(movie.info){
+  return(as.vector(movie.info$Director))
+}
+movie.director<-Director(movie.frame)
+print(movie.director)
 # Call Director with your favorite movie, and assign it to the variable movie.director
 
 # Bonus 
